@@ -1,6 +1,5 @@
 const core = require('@actions/core')
 const {installElixir, installOTP} = require('./installer')
-const path = require('path')
 const semver = require('semver')
 const https = require('https')
 
@@ -28,9 +27,6 @@ async function main() {
   console.log(`##[endgroup]`)
 
   process.env.PATH = `/tmp/.setup-elixir/elixir/bin:${process.env.PATH}`
-
-  const matchersPath = path.join(__dirname, '..', '.github')
-  console.log(`##[add-matcher]${path.join(matchersPath, 'elixir.json')}`)
 }
 
 function checkPlatform() {
