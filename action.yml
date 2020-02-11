@@ -9,12 +9,7 @@ inputs:
     description: Version range or exact version of Elixir to use
   otp-version:
     description: Version range or exact version of OTP to use
-  install-hex:
-    description: Whether to install Hex
-    default: true
-  install-rebar:
-    description: Whether to install Rebar
-    default: true
+
 runs:
   using: node12
   main: src/setup-elixir.js
